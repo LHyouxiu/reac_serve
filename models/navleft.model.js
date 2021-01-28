@@ -37,9 +37,20 @@ const findleftnav = ()=>{
   })
 }
 
+const findleftOne = (id)=>{
+  return LeftModel.findById(id)
+  .then((res)=>{
+    return res
+  })
+  .catch((err)=>{
+    return err
+  })
+}
+
 module.exports = {
   saveLeftnav,
-  findleftnav
+  findleftnav,
+  findleftOne
 }
 
 
